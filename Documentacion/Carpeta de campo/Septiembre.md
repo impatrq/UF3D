@@ -420,4 +420,36 @@
 -  Encontrar el problema del circuito de la pi 4
 -  Probar los Ejes de la impresora
 
----3
+---
+
+30 de septiembre:
+
+**objetivo del dia:** terminar la simulacion del escaneo
+
+**actividades realizadas:** realizamos testeo de los nuevos driver que llegaron  para los motores paso a paso.
+testeamos uno por uno su optimo funcionamiento y empezamos a realizar el codigo para combinar el movimiento de motor mas la lectura del lidar simulando el escaneo punto por punto.
+
+**dificultades encontradas:**
+-  tuvimos problemas para entrar a la terminal de la pi4 por un cambio en la ip
+
+-  los drivers y el lidar no funcionaban por un problema de cableado y de limite de corriente que tuvimos que ampliar para su funcionamiento.
+
+-  las vueltas y los pasos del motor no estaban directamente relacionados, lo corregimos cambiando unas lineas de codigo.
+
+
+
+**resultados obtenidos:**
+
+-  los motores giraron con los nuevos drivers
+
+-  se logro y se mejoro que ambos motores giren en simulteando mientras trabajaban con el Lidar.
+
+-  se logro realizar la simulación del escaneo.
+
+
+**siguientes paso:** 
+-  comprar tiras de pines
+-  terminar de corregir la placa
+-  soldar los componentes
+
+---  
