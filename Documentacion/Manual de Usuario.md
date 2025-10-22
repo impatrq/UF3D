@@ -51,5 +51,6 @@
   <p>El Escaner es, en terminos sencillos, una caja metalica con una pequea ventana que da al interiror. Tambien cuenta con un cable de alimentacion y uno USB. El de alimentacion debe ir conectado al tomacorrientes. El cable USB ira conectado al lugar correspondiiente de la impresora, por lo tanto, la impresora no dbe estar muy alejada del escaner para que no tironee el cable. </p>
 </div>
 <div>
-  <h3> Desamblaje</h3>  
+  <h3> Desamblaje</h3> 
+  <p>Para sacar los tornillos externos del escaner, haria falta una llave alem de 4mm. Para aflojar lostornillos de las borneras haria falta un dstornillador philips de  mm o menos</p>
 </div>
