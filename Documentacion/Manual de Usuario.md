@@ -38,22 +38,24 @@
 </div>
 <h2>I. Introduccion</h2>
 <div id ="Objetivo">
-  <h3>I.1 Objetivo</h3>
+  <h3>1. Objetivo</h3>
   <p>El objetivo de este documento es guiar al usuario de este producto en en uso del mismo.</p>
 </div>
 <div>
-  <h3> I.2 Requerimientos</h3>
+  <h3>2. Requerimientos</h3>
   <ul>
     <li></li>
   </ul>
 </div>
 <h2>II. Escaner</h2>
 <div>
-  <h3>II.1 Instalacion</h3>
+  <h3>1. Instalacion</h3>
   <p>El Escaner es, en terminos sencillos, una caja metalica con una pequea ventana que da al interiror. Tambien cuenta con un cable de alimentacion y uno USB. El de alimentacion debe ir conectado al tomacorrientes. El cable USB ira conectado al lugar correspondiiente de la impresora, por lo tanto, la impresora no dbe estar muy alejada del escaner para que no tironee el cable. </p>
 </div>
 <div>
-  <h3> II.2 Ensamblaje y desamblaje</h3>
-  <h4> II.2.i Tornillos y Destornilladores</h4>
+  <h3>2. Ensamblaje y desamblaje</h3>
+  <h4>i. Tornillos y Destornilladores</h4>
   <p>Para sacar los tornillos externos con huecos hexagonales del escaner, haria falta una llave alem de 4mm. Para los tornillos externos con huecos en cruz hace falta tornillos phillips de 5mm o menos. Para aflojar los tornillos de las borneras haria falta un dstornillador philips de 5mm o menos, lo mismo para los tornillos que unen los ejes.</p>
+  <h4>ii. </h4>
+  <p></p>
 </div>
