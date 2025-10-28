@@ -1,7 +1,7 @@
 # Bienvenido a UpFeet
 
 <p align="center">
-  <img src="Documentacion/Logos/Logo.jpg" alt="UpFeet Logo" width="150"/>
+  <img src="./Documentacion/Logos/Logo.jpg" alt="UpFeet Logo" width="150"/>
 </p>
 
 <div align="center">
