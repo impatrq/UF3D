@@ -1,4 +1,4 @@
-26641641936319291
+26643403835284157
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -106273,6 +106273,13 @@ MODULE_RASPBERRY_PI_4B_4GB
 0
 48
 48
+pi pico
+RASPBERRY_PI_PICO
+
+
+0
+40
+40
 tmc
 MODULE_TMC2208_SILENTSTEPSTICK
 
