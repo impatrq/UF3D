@@ -7,7 +7,7 @@
 
 **Actividades realizadas:**  
 -  Se creo la pagina web del proyecto
--  Se vrearon las redes sociales del proyecto
+-  Se crearon las redes sociales del proyecto
 -  Se terminaron los objetivos de logro
 -  Se termino el anteproyecto
 -  Se subio infomacion del proyecto a las redes sociales
