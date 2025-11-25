@@ -7,3 +7,8 @@ pinDirection = 17
 
 stepsPerRevolution = 200
 stepDelay = 0.005
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(pinStep_M1, GPIO.OUT)
+GPIO.setup(pinStep_M2, GPIO.OUT)
+GPIO.setup(pinDirection, GPIO.OUT)
