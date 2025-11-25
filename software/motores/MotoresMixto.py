@@ -12,3 +12,8 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(pinStep_M1, GPIO.OUT)
 GPIO.setup(pinStep_M2, GPIO.OUT)
 GPIO.setup(pinDirection, GPIO.OUT)
+
+
+if _name_ == '_main_':
+    try:
+        GPIO.output(pinDirection, GPIO.HIGH)
