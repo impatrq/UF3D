@@ -7,9 +7,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(DIR, GPIO.OUT)
 GPIO.setup(STEP, GPIO.OUT)
 
-
-
-
+GPIO.output(DIR, GPIO.HIGH)
 
 
 
