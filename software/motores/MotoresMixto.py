@@ -17,3 +17,7 @@ GPIO.setup(pinDirection, GPIO.OUT)
 if __name__ == '__main__':
     try:
         GPIO.output(pinDirection, GPIO.HIGH)
+
+
+while True:
+            print("Iniciando una vuelta completa (200 pasos)...")
