@@ -14,6 +14,6 @@ GPIO.setup(pinStep_M2, GPIO.OUT)
 GPIO.setup(pinDirection, GPIO.OUT)
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     try:
         GPIO.output(pinDirection, GPIO.HIGH)
