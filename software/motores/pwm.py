@@ -9,6 +9,8 @@ GPIO.setup(STEP, GPIO.OUT)
 
 GPIO.output(DIR, GPIO.HIGH)
 
+pwm = GPIO.PWM(STEP , 1000)
+
 
 
 
