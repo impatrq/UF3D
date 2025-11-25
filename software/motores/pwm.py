@@ -12,9 +12,9 @@ GPIO.output(DIR, GPIO.HIGH)
 pwm = GPIO.PWM(STEP , 1000)
 pwm.start(50)
 
-
-
-
-
-
-	
+try:
+	while True:
+	      pass
+except KeyboardInterrupt:
+	pwm.stop()
+	GPIO.cleanup()
