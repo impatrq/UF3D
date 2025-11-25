@@ -28,3 +28,6 @@ for step_count in range(stepsPerRevolution):
                 GPIO.output(pinStep_M2, GPIO.HIGH)
                 time.sleep(stepDelay)
                 
+ GPIO.output(pinStep_M1, GPIO.LOW)
+                GPIO.output(pinStep_M2, GPIO.LOW)
+                time.sleep(stepDelay) 
