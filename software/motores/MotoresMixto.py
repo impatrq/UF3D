@@ -21,3 +21,10 @@ if __name__ == '__main__':
 
 while True:
             print("Iniciando una vuelta completa (200 pasos)...")
+
+
+for step_count in range(stepsPerRevolution):
+                GPIO.output(pinStep_M1, GPIO.HIGH)
+                GPIO.output(pinStep_M2, GPIO.HIGH)
+                time.sleep(stepDelay)
+                
