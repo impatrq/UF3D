@@ -452,4 +452,4 @@ testeamos uno por uno su optimo funcionamiento y empezamos a realizar el codigo 
 -  terminar de corregir la placa
 -  soldar los componentes
 
----  
+
