@@ -26,3 +26,16 @@ TOTAL_SAMPLES = int(STEPS_PER_REV / STEPS_PER_SAMPLE)
 dir_pin = Pin(DIR_PIN, Pin.OUT) 
 step_pin = Pin(STEP_PIN, Pin.OUT) 
 
+
+def take_step(): 
+    step_pin.value(1) 
+    time.sleep(STEP_DELAY) 
+    step_pin.value(0) 
+    time.sleep(STEP_DELAY) 
+
+
+def get_lidar_distance(): 
+    uart.write(CMD_MEASURE_DISTANCE) 
+    time.sleep_ms(LIDAR_STABILIZATION_MS)  
+
+    
