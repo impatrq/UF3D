@@ -16,3 +16,7 @@ ser.baudrate = 115200
 cmd = bytes.fromhex('55 AA 81 00 FA')
 
 def getLidarData():
+
+while True:
+        ser.write(cmd)
+        count = ser.in_waiting
