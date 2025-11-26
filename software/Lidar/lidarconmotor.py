@@ -19,9 +19,9 @@ STEP_PIN = 18
 STEPS_PER_REV = 200 
 STEP_DELAY = 0.001 
 
- 
+
 STEPS_PER_SAMPLE = 10  
-TOTAL_SAMPLES = int(STEPS_PER_REV / STEPS_PER_SAMPLE) 
+TOTAL_SAMPLES = int(STEPS_PER_REV / STEPS_PER_SAMPLE)  
 
 dir_pin = Pin(DIR_PIN, Pin.OUT) 
 step_pin = Pin(STEP_PIN, Pin.OUT) 
@@ -65,15 +65,15 @@ def main_scan(total_samples):
 
     for sample in range(total_samples): 
          
-         
+        
         for _ in range(STEPS_PER_SAMPLE): 
             take_step() 
             current_step += 1 
          
-      
+        
         distance, status = get_lidar_distance() 
          
-       
+         
         if distance > 0: 
             angle = (current_step / STEPS_PER_REV) * 360  
             sys.stdout.write('Muestra %2d | Angulo %.1f° | Distancia: %5d mm | Status: 0x%X\n' %  
@@ -84,7 +84,7 @@ def main_scan(total_samples):
 
 if __name__ == '__main__': 
     try: 
-   
+         
         main_scan(TOTAL_SAMPLES) 
         sys.stdout.write("Escaneo completado.\n") 
     except KeyboardInterrupt: 
