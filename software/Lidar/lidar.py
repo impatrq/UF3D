@@ -25,3 +25,5 @@ while True:
             recv = ser.read(8)
             ser.reset_input_buffer()
             if recv[0] == 0x55 and recv[1] == 0xAA and recv[7] == 0xFA:
+
+distance = struct.unpack('>H', recv[4:6])[0]
