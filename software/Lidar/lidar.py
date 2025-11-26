@@ -14,3 +14,5 @@ ser.port = '/dev/ttyS0'
 ser.baudrate = 115200
 
 cmd = bytes.fromhex('55 AA 81 00 FA')
+
+def getLidarData():
