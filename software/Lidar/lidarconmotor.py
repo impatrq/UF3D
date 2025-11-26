@@ -70,10 +70,10 @@ def main_scan(total_samples):
             take_step() 
             current_step += 1 
          
-        
+      
         distance, status = get_lidar_distance() 
          
-        
+       
         if distance > 0: 
             angle = (current_step / STEPS_PER_REV) * 360  
             sys.stdout.write('Muestra %2d | Angulo %.1f° | Distancia: %5d mm | Status: 0x%X\n' %  
@@ -82,3 +82,10 @@ def main_scan(total_samples):
              sys.stdout.write('Muestra %2d | Error de lectura: %d\n' % (sample, distance)) 
 
 
+if __name__ == '__main__': 
+    try: 
+   
+        main_scan(TOTAL_SAMPLES) 
+        sys.stdout.write("Escaneo completado.\n") 
+    except KeyboardInterrupt: 
+        sys.stdout.write("Escaneo detenido por el usuario.\n")
