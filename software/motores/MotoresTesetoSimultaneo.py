@@ -15,3 +15,9 @@ def set_directions(dir1, dir2, dir3):
     dir_pin_1.value(dir1)
     dir_pin_2.value(dir2)
     dir_pin_3.value(dir3)
+
+def take_step_simultaneous():
+    step_pin_1.value(1)
+    step_pin_2.value(1)
+    step_pin_3.value(1)
+    time.sleep(STEP_DELAY)   
