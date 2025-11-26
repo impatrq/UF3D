@@ -8,3 +8,7 @@ ports = serial.tools.list_ports.comports()
 for p in ports:
     print(p.device)
 print(len(ports), 'ports found')
+
+ser = serial.Serial()
+ser.port = '/dev/ttyS0'
+ser.baudrate = 115200
