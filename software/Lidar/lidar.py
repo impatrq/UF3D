@@ -20,3 +20,8 @@ def getLidarData():
 while True:
         ser.write(cmd)
         count = ser.in_waiting
+
+ if count > 7:
+            recv = ser.read(8)
+            ser.reset_input_buffer()
+            if recv[0] == 0x55 and recv[1] == 0xAA and recv[7] == 0xFA:
