@@ -34,3 +34,9 @@ for step_count in range(stepsPerRevolution):
 
 print("Vuelta completada. Pausa de 1 segundo.")
             time.sleep(1)
+
+except KeyboardInterrupt:
+        pass 
+
+    finally:
+        GPIO.cleanup()
