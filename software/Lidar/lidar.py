@@ -34,3 +34,11 @@ distance = struct.unpack('>H', recv[4:6])[0]
 
 else:
             time.sleep(0.1)
+
+if _name_ == '_main_':
+	try:
+		if ser.is_open == False:
+			try:
+				ser.open()
+			except:
+				print('Open COM failed!')
