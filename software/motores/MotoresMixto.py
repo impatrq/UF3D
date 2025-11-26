@@ -31,3 +31,6 @@ for step_count in range(stepsPerRevolution):
  GPIO.output(pinStep_M1, GPIO.LOW)
                 GPIO.output(pinStep_M2, GPIO.LOW)
                 time.sleep(stepDelay) 
+
+print("Vuelta completada. Pausa de 1 segundo.")
+            time.sleep(1)
