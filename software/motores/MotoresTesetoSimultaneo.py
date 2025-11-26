@@ -21,3 +21,8 @@ def take_step_simultaneous():
     step_pin_2.value(1)
     step_pin_3.value(1)
     time.sleep(STEP_DELAY)   
+
+    step_pin_1.value(0)
+    step_pin_2.value(0)
+    step_pin_3.value(0)
+    time.sleep(STEP_DELAY)
