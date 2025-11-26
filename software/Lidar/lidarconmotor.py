@@ -74,4 +74,11 @@ def main_scan(total_samples):
         distance, status = get_lidar_distance() 
          
         
-        
+        if distance > 0: 
+            angle = (current_step / STEPS_PER_REV) * 360  
+            sys.stdout.write('Muestra %2d | Angulo %.1f° | Distancia: %5d mm | Status: 0x%X\n' %  
+                             (sample, angle, distance, status)) 
+        else: 
+             sys.stdout.write('Muestra %2d | Error de lectura: %d\n' % (sample, distance)) 
+
+
