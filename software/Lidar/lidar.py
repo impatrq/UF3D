@@ -42,3 +42,9 @@ if _name_ == '_main_':
 				ser.open()
 			except:
 				print('Open COM failed!')
+
+
+getLidarData()
+	except KeyboardInterrupt:
+		if ser != None:
+			ser.close()
