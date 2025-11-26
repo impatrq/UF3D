@@ -2,14 +2,29 @@ from machine import Pin
 import time
 import sys
 
+
 STEP_PIN_1 = 13 
 DIR_PIN_1 = 12
 
-STEP_PIN_2 = 3
-DIR_PIN_2 = 2
 
-STEP_PIN_3 = 19
-DIR_PIN_3 = 18
+STEP_PIN_2 = 15 
+DIR_PIN_2 = 14
+
+
+STEP_PIN_3 = 17 
+DIR_PIN_3 = 16
+
+STEP_DELAY = 0.001 
+
+dir_pin_1 = Pin(DIR_PIN_1, Pin.OUT)
+step_pin_1 = Pin(STEP_PIN_1, Pin.OUT)
+
+dir_pin_2 = Pin(DIR_PIN_2, Pin.OUT)
+step_pin_2 = Pin(STEP_PIN_2, Pin.OUT)
+
+dir_pin_3 = Pin(DIR_PIN_3, Pin.OUT)
+step_pin_3 = Pin(STEP_PIN_3, Pin.OUT)
+
 
 def set_directions(dir1, dir2, dir3):
     dir_pin_1.value(dir1)
@@ -20,22 +35,23 @@ def take_step_simultaneous():
     step_pin_1.value(1)
     step_pin_2.value(1)
     step_pin_3.value(1)
-    time.sleep(STEP_DELAY)   
-
+    time.sleep(STEP_DELAY)
+    
     step_pin_1.value(0)
     step_pin_2.value(0)
     step_pin_3.value(0)
     time.sleep(STEP_DELAY)
 
+
 def main_test():
     set_directions(1, 0, 1)
     
-    sys.stdout.write("Test de Motores Triples Iniciado. Presiona Ctrl+C para detener.\n")
+    sys.stdout.write("Test de Motores Triples Iniciado.\n")
 
     try:
         while True:
-            take_step_simultaneous()
-
+            take_step_simultaneous() 
+            
     except KeyboardInterrupt:
         sys.stdout.write("Test de Motores Detenido.\n")
 
