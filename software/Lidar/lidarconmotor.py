@@ -56,3 +56,22 @@ def get_lidar_distance():
     return -3, None 
 
 
+def main_scan(total_samples): 
+    sys.stdout.write("Iniciando escaneo: %d muestras en 360 grados.\n" % total_samples) 
+     
+    dir_pin.value(1) 
+     
+    current_step = 0 
+
+    for sample in range(total_samples): 
+         
+         
+        for _ in range(STEPS_PER_SAMPLE): 
+            take_step() 
+            current_step += 1 
+         
+        
+        distance, status = get_lidar_distance() 
+         
+        
+        
