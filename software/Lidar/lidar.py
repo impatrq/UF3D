@@ -31,3 +31,6 @@ distance = struct.unpack('>H', recv[4:6])[0]
                 print('distance = %5d mm' % (distance))
                 ser.reset_input_buffer()
                 time.sleep(0.1)
+
+else:
+            time.sleep(0.1)
