@@ -35,3 +35,9 @@ def main_test():
     try:
         while True:
             take_step_simultaneous()
+
+    except KeyboardInterrupt:
+        sys.stdout.write("Test de Motores Detenido.\n")
+
+if __name__ == '__main__':
+    main_test()
