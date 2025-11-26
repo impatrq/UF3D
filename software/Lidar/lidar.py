@@ -33,7 +33,7 @@ def getLidarData():
         else:
             time.sleep(0.1)
 
-if _name_ == '_main_':
+if __name__ == '__main__':
 	try:
 		if ser.is_open == False:
 			try:
