@@ -38,4 +38,21 @@ def get_lidar_distance():
     uart.write(CMD_MEASURE_DISTANCE) 
     time.sleep_ms(LIDAR_STABILIZATION_MS)  
 
-    
+    count = uart.any() 
+    if count >= RESPONSE_LEN: 
+        recv = uart.read(RESPONSE_LEN) 
+         
+        if recv[0] == 0x55 and recv[1] == 0xAA and recv[7] == 0xFA:  
+             
+            distance = (recv[4] * 256) + recv[5] 
+            status_code = recv[6] 
+             
+            if status_code == 0x00: 
+                return distance, status_code 
+            else: 
+                return -1, status_code 
+        else: 
+            return -2, None 
+    return -3, None 
+
+
