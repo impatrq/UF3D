@@ -44,7 +44,7 @@
 * Problema de comunicación inexplicable del LiDAR con la Pi Pico.
 
 **Próximos pasos:**
-* Fabricar los componentes mecánicos de acople.
+* Fabricar los componentes mecánicos de acople
 
 ***
 
