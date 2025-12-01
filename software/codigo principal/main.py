@@ -19,3 +19,36 @@ dirs_y = [machine.Pin(p, machine.Pin.OUT) for p in PINS_DIR_Y]
 
 uart = machine.UART(0, baudrate=115200, rx=machine.Pin(1), tx=machine.Pin(0)) 
 
+DELAY_PULSO_US = 500  
+DIR_DERECHA = 1
+DIR_IZQUIERDA = 0
+DIR_ADELANTE = 1
+
+
+
+def set_direccion(pines_dir, direccion):
+    """Establece la dirección para uno o varios pines."""
+    val = 0 if direccion else 1
+    if isinstance(pines_dir, list):
+        for pin in pines_dir:
+            pin.value(val)
+    else:
+        pines_dir.value(val)
+
+def toggle_step(pines_step):
+    """Genera un flanco de subida y bajada en los pines STEP."""
+    # High
+    if isinstance(pines_step, list):
+        for pin in pines_step: pin.value(1)
+    else:
+        pines_step.value(1)
+    
+    time.sleep_us(DELAY_PULSO_US)
+    
+    # Low
+    if isinstance(pines_step, list):
+        for pin in pines_step: pin.value(0)
+    else:
+        pines_step.value(0)
+        
+    time.sleep_us(DELAY_PULSO_US)
