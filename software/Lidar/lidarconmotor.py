@@ -88,4 +88,4 @@ if __name__ == '__main__':
         main_scan(TOTAL_SAMPLES) 
         sys.stdout.write("Escaneo completado.\n") 
     except KeyboardInterrupt: 
-        sys.stdout.write("Escaneo detenido por el usuario.\n
+        sys.stdout.write("Escaneo detenido por el usuario.\n")
