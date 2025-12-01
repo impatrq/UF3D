@@ -25,4 +25,7 @@ def crear_stl():
         except FileNotFoundError:
             print(f"Error: No encuentro el archivo {INPUT_FILE}")
         return
+    x = np.array(x_list)
+    y = np.array(y_list)
+    z = np.array(z_list)
 
