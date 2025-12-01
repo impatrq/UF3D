@@ -8,3 +8,6 @@ OUTPUT_FILE = 'modelo_escaneado.stl'
 
 def crear_stl():
     print("1. Leyendo archivo de puntos...")
+    x_list = []
+    y_list = []
+    z_list = []
