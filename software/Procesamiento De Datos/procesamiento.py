@@ -2,3 +2,6 @@ import json
 import numpy as np
 from stl import mesh
 from scipy.spatial import Delaunay
+
+INPUT_FILE = './matenme/scan_data.json'
+OUTPUT_FILE = 'modelo_escaneado.stl'
