@@ -41,3 +41,5 @@ def crear_stl():
         for j in range(3):
             scan_mesh.vectors[i][j] = [x[f[j]], y[f[j]], z[f[j]]]
 
+      print(f"3. Guardando archivo STL ({num_triangles} polígonos)...")
+
