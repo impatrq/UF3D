@@ -52,3 +52,15 @@ def toggle_step(pines_step):
         pines_step.value(0)
         
     time.sleep_us(DELAY_PULSO_US)
+
+def generar_pulsos(pines_step, pines_dir, direccion, duracion_segundos):
+    """
+    Abstrae el movimiento generando pulsos durante un tiempo determinado.
+    Maneja tanto motores simples (X) como dobles (Y).
+    """
+    set_direccion(pines_dir, direccion)
+    
+    start = time.ticks_ms()
+    
+    while time.ticks_diff(time.ticks_ms(), start) < (duracion_segundos * 1000):
+        toggle_step(pines_step)
