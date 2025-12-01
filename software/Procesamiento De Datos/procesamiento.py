@@ -38,4 +38,5 @@ def crear_stl():
     scan_mesh = mesh.Mesh(np.zeros(num_triangles, dtype=mesh.Mesh.dtype))
 
     for i, f in enumerate(tri.simplices):
+        for j in range(3):
 
