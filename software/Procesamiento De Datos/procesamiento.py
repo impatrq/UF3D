@@ -16,3 +16,4 @@ def crear_stl():
         with open(INPUT_FILE, 'r') as f:
             for linea in f:
                 try:
+                    data = json.loads(linea)
