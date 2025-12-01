@@ -14,3 +14,4 @@ def crear_stl():
 
     try:
         with open(INPUT_FILE, 'r') as f:
+            for linea in f:
