@@ -29,3 +29,5 @@ def crear_stl():
     y = np.array(y_list)
     z = np.array(z_list)
 
+    points_2d = np.vstack([x, y]).T
+
