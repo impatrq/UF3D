@@ -18,5 +18,5 @@ def crear_stl():
                 try:
                     data = json.loads(linea)
                     x_list.append(data['x'])
-                   y_list.append(data['y'])
-                z_list.append(data['z'])
+                    y_list.append(data['y'])
+                    z_list.append(data['z'])
