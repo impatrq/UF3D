@@ -43,3 +43,7 @@ def crear_stl():
 
       print(f"3. Guardando archivo STL ({num_triangles} polígonos)...")
 
+      scan_mesh.save(OUTPUT_FILE)
+    
+
+
