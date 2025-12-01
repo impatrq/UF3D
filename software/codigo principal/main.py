@@ -13,3 +13,6 @@ PINS_DIR_Y = [20, 2]
 
 step_x = machine.Pin(PIN_STEP_X, machine.Pin.OUT)
 dir_x = machine.Pin(PIN_DIR_X, machine.Pin.OUT)
+
+steps_y = [machine.Pin(p, machine.Pin.OUT) for p in PINS_STEP_Y]
+dirs_y = [machine.Pin(p, machine.Pin.OUT) for p in PINS_DIR_Y]
