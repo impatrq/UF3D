@@ -39,4 +39,5 @@ def crear_stl():
 
     for i, f in enumerate(tri.simplices):
         for j in range(3):
+            scan_mesh.vectors[i][j] = [x[f[j]], y[f[j]], z[f[j]]]
 
