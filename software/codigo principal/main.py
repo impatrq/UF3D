@@ -192,3 +192,17 @@ def main():
         generar_pulsos(steps_y, dirs_y, DIR_ADELANTE, duracion_segundos=2.0)
 
         coord_y += 10 
+
+if __name__ == "__main__":
+    
+    try:
+        if 'scan_data.json' not in uos.listdir():
+            with open('scan_data.json', 'w') as f:
+                pass
+    except Exception:
+        pass 
+            
+    try:
+        main()
+    except KeyboardInterrupt:
+        print("Escaneo detenido por el usuario.")
