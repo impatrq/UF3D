@@ -85,3 +85,64 @@ def obtener_lectura_lidar():
     
     if uart.any():
         uart.read()
+
+while True: 
+        total_attempts += 1
+        
+       
+        uart.write(CMD_MEASURE_DISTANCE)
+        
+        
+        time.sleep_ms(LIDAR_STABILIZATION_MS)
+        
+        count = uart.any()
+        
+        
+        if count >= RESPONSE_LEN:
+            recv = uart.read(RESPONSE_LEN)
+            
+            
+            if (recv and len(recv) == RESPONSE_LEN and 
+                recv[0] == HEADER_1 and 
+                recv[1] == HEADER_2 and 
+                recv[7] == FOOTER): 
+                
+                
+                distance = (recv[4] * 256) + recv[5]
+                if distance > 0:
+                    sys.stdout.write('   [Dato ÚNICO] -> Distancia: %5d mm. Total intentos: %d\n' % 
+                                     (distance, total_attempts))
+                    
+                    
+                    if uart.any(): uart.read()
+                    
+                    
+                    return distance, total_attempts
+        
+        
+        if uart.any():
+            uart.read()
+            
+        
+        if total_attempts % 10 == 0:
+            sys.stdout.write('   [ATTEMPT %d] -> FALLO. Reintentando...\n' % total_attempts)
+            
+        time.sleep_ms(RETRY_DELAY_MS)
+
+def guardar_dato(x, y, z):
+    """Guarda la tupla en el archivo JSONL (JSON Lines)."""
+    linea = json.dumps({"x": x, "y": y, "z": z}) + "\n"
+    try:
+        
+        with open('scan_data.json', 'a') as f:
+            f.write(linea)
+            f.flush() 
+            uos.sync() 
+    except OSError as e:
+        print(f"Error escribiendo archivo: {e}")
+
+def limpiar_archivo():
+    print(f"--- Limpiando archivo ---")
+    with open('scan_data.json', 'w') as f:
+        pass 
+    print("Archivo listo.")
