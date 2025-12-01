@@ -47,6 +47,9 @@ def crear_stl():
     
     print(f"¡LISTO! Archivo generado: {OUTPUT_FILE}")
     print("Ábrelo en Ultimaker Cura.")
+
+ if __name__ == '__main__':
+    crear_stl()
     
 
 
