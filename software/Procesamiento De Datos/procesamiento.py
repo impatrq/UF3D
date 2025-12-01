@@ -19,3 +19,4 @@ def crear_stl():
                     data = json.loads(linea)
                     x_list.append(data['x'])
                    y_list.append(data['y'])
+                z_list.append(data['z'])
