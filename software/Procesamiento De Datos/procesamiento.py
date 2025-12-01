@@ -24,4 +24,5 @@ def crear_stl():
                     continue 
         except FileNotFoundError:
             print(f"Error: No encuentro el archivo {INPUT_FILE}")
+        return
 
