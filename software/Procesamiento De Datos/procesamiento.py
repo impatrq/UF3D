@@ -3,6 +3,7 @@ import numpy as np
 from stl import mesh
 from scipy.spatial import Delaunay
 
+
 INPUT_FILE = './matenme/scan_data.json'
 OUTPUT_FILE = 'modelo_escaneado.stl'
 
@@ -21,35 +22,41 @@ def crear_stl():
                     y_list.append(data['y'])
                     z_list.append(data['z'])
                 except ValueError:
-                    continue 
-        except FileNotFoundError:
-            print(f"Error: No encuentro el archivo {INPUT_FILE}")
+                    continue
+    except FileNotFoundError:
+        print(f"Error: No encuentro el archivo {INPUT_FILE}")
         return
+
+    
     x = np.array(x_list)
     y = np.array(y_list)
-    z = np.array(z_list)
+    z = np.array(z_list) 
 
+    
     points_2d = np.vstack([x, y]).T
 
     print(f"2. Generando malla con {len(x)} puntos...")
-
+    
+    
     tri = Delaunay(points_2d)
+
+    
     num_triangles = len(tri.simplices)
     scan_mesh = mesh.Mesh(np.zeros(num_triangles, dtype=mesh.Mesh.dtype))
 
+    
     for i, f in enumerate(tri.simplices):
+        
         for j in range(3):
             scan_mesh.vectors[i][j] = [x[f[j]], y[f[j]], z[f[j]]]
 
-      print(f"3. Guardando archivo STL ({num_triangles} polígonos)...")
-
-      scan_mesh.save(OUTPUT_FILE)
+    print(f"3. Guardando archivo STL ({num_triangles} polígonos)...")
+    scan_mesh.save(OUTPUT_FILE)
     
     print(f"¡LISTO! Archivo generado: {OUTPUT_FILE}")
     print("Ábrelo en Ultimaker Cura.")
 
- if __name__ == '__main__':
+if __name__ == '__main__':
     crear_stl()
-    
 
 
