@@ -13,3 +13,4 @@ def crear_stl():
     z_list = []
 
     try:
+        with open(INPUT_FILE, 'r') as f:
