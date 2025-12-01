@@ -5,3 +5,6 @@ from scipy.spatial import Delaunay
 
 INPUT_FILE = './matenme/scan_data.json'
 OUTPUT_FILE = 'modelo_escaneado.stl'
+
+def crear_stl():
+    print("1. Leyendo archivo de puntos...")
