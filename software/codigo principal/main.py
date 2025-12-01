@@ -64,3 +64,24 @@ def generar_pulsos(pines_step, pines_dir, direccion, duracion_segundos):
     
     while time.ticks_diff(time.ticks_ms(), start) < (duracion_segundos * 1000):
         toggle_step(pines_step)
+
+def obtener_lectura_lidar():
+    HEADER_1 = 0x55 
+    HEADER_2 = 0xAA
+    FOOTER   = 0xFA
+    RESPONSE_LEN = 8 
+    CMD_MEASURE_DISTANCE = b'\x55\xAA\x81\x00\xFA' 
+
+    LIDAR_STABILIZATION_MS = 200
+    RETRY_DELAY_MS = 25
+    
+    """
+    Bucle infinito hasta obtener una lectura válida.
+    Basado en la lógica robusta de 'request-response'.
+    """
+    total_attempts = 0
+    sys.stdout.write("   [LIDAR] Buscando dato válido...\n")
+    
+    
+    if uart.any():
+        uart.read()
