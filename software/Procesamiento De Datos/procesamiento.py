@@ -21,3 +21,4 @@ def crear_stl():
                     y_list.append(data['y'])
                     z_list.append(data['z'])
                 except ValueError:
+                    continue
