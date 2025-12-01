@@ -11,3 +11,5 @@ def crear_stl():
     x_list = []
     y_list = []
     z_list = []
+
+    try:
