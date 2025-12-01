@@ -17,3 +17,5 @@ def crear_stl():
             for linea in f:
                 try:
                     data = json.loads(linea)
+                    x_list.append(data['x'])
+                   
