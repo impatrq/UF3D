@@ -146,3 +146,49 @@ def limpiar_archivo():
     with open('scan_data.json', 'w') as f:
         pass 
     print("Archivo listo.")
+
+def main():
+    limpiar_archivo() 
+    print("Iniciando Escáner 3D...")
+    
+    coord_y = 0
+    
+    
+    while True:
+        print(f"--- Iniciando Fila en Y={coord_y} ---")
+        
+        coord_x = 0
+        tiempo_fila_inicio = time.time()
+        movimientos_realizados = 0 
+        
+        
+        while (time.time() - tiempo_fila_inicio) < 120:
+            
+            
+            z, intentos = obtener_lectura_lidar()
+            
+            
+            print(f"Guardando: X={coord_x}, Y={coord_y}, Z={z}")
+            guardar_dato(coord_x, coord_y, z)
+            
+            
+            generar_pulsos(step_x, dir_x, DIR_DERECHA, duracion_segundos=1.0)
+            
+           
+            coord_x += 5
+            movimientos_realizados += 1
+            
+        
+        print("Fin de tiempo de fila. Retornando carro X...") 
+        tiempo_retorno = movimientos_realizados * 1.0
+        generar_pulsos(step_x, dir_x, DIR_IZQUIERDA, duracion_segundos=tiempo_retorno)
+        
+        
+        coord_x = 0
+        
+        
+        print(f"Avanzando eje Y...")
+        
+        generar_pulsos(steps_y, dirs_y, DIR_ADELANTE, duracion_segundos=2.0)
+
+        coord_y += 10 
