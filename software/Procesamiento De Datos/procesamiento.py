@@ -45,5 +45,8 @@ def crear_stl():
 
       scan_mesh.save(OUTPUT_FILE)
     
+    print(f"¡LISTO! Archivo generado: {OUTPUT_FILE}")
+    print("Ábrelo en Ultimaker Cura.")
+    
 
 
