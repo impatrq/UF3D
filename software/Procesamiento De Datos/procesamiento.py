@@ -33,3 +33,5 @@ def crear_stl():
 
     print(f"2. Generando malla con {len(x)} puntos...")
 
+    tri = Delaunay(points_2d)
+
