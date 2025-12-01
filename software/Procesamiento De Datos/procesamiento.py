@@ -35,4 +35,5 @@ def crear_stl():
 
     tri = Delaunay(points_2d)
     num_triangles = len(tri.simplices)
+    scan_mesh = mesh.Mesh(np.zeros(num_triangles, dtype=mesh.Mesh.dtype))
 
