@@ -31,3 +31,5 @@ def crear_stl():
 
     points_2d = np.vstack([x, y]).T
 
+    print(f"2. Generando malla con {len(x)} puntos...")
+
